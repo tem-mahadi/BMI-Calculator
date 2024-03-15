@@ -8,7 +8,8 @@
     android:orientation="vertical"
     android:gravity="center"
     android:id="@+id/lnMain"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
    <ImageView
        android:id="@+id/imageView"

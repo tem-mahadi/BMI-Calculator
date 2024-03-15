@@ -6,8 +6,11 @@ import androidx.core.content.ContextCompat;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -22,17 +25,20 @@ public class MainActivity extends AppCompatActivity {
         EditText editWeight, editHeight, editHeightInch;
         Button btnCalc;
         LinearLayout lnMain = findViewById(R.id.lnMain);
+        ImageView m;
 
         editWeight = findViewById(R.id.editWeight);
         editHeight = findViewById(R.id.editHeight);
         editHeightInch = findViewById(R.id.editHeightInch);
         btnCalc = findViewById(R.id.btnCalc);
         txtResult = findViewById(R.id.txtResult);
-
+        m=findViewById(R.id.imageView);
+        Animation anim= AnimationUtils.loadAnimation(this,R.anim.rotatescale);
         btnCalc.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
+                m.startAnimation(anim);
                 int wt = Integer.parseInt(editWeight.getText().toString());
                 int ht = Integer.parseInt(editHeight.getText().toString());
                 int htInch = Integer.parseInt(editHeightInch.getText().toString());
