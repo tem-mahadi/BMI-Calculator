@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         EditText editWeight, editHeight, editHeightInch;
         Button btnCalc;
         LinearLayout lnMain = findViewById(R.id.lnMain);
+
         editWeight = findViewById(R.id.editWeight);
         editHeight = findViewById(R.id.editHeight);
         editHeightInch = findViewById(R.id.editHeightInch);
