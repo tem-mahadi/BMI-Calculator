@@ -16,22 +16,29 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         app:lottie_rawRes="@raw/watermelon"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
         android:layout_marginTop="40dp"
         />
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textSize="24sp"
-        android:text="How Are You?"
-        android:layout_marginTop="40dp"/>
+        android:text="How Are You"
+        />
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:id="@+id/spinner"
         android:layout_marginBottom="77dp"/>
-
+</LinearLayout>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,7 +47,6 @@
         android:textSize="20sp"
         android:layout_marginLeft="5dp"
         android:text="Hello Dear! Mahadi Here..."
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp" />
 
     <AutoCompleteTextView
