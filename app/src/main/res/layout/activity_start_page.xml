@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:id="@+id/spinner"
-        android:layout_marginBottom="77dp"/>
+        />
 </LinearLayout>
     <TextView
         android:layout_width="match_parent"

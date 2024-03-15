@@ -80,7 +80,7 @@ public class startPage extends AppCompatActivity {
                         startActivity(next);
                         finish();
                     }
-                },1000);
+                },1300);
 
             }
         });
