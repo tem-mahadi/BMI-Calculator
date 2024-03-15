@@ -21,7 +21,7 @@ import com.airbnb.lottie.LottieAnimationView;
 import java.util.ArrayList;
 
 public class startPage extends AppCompatActivity {
-    Spinner spinner; AutoCompleteTextView ac;
+    Spinner spinner; AutoCompleteTextView autocm;
     LottieAnimationView lottie;
     TextView t;
     ArrayList<String> arr = new ArrayList<>();
@@ -34,7 +34,7 @@ public class startPage extends AppCompatActivity {
 
         Intent next = new Intent(this, MainActivity.class);
         spinner= findViewById(R.id.spinner);
-        ac=findViewById(R.id.ac);
+        autocm=findViewById(R.id.autoComplete);
         t=findViewById(R.id.text2);
 
         arr.add("I Am Fine");
@@ -48,7 +48,7 @@ public class startPage extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, arr);
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, autoArr);
         spinner.setAdapter(adapter);
-        ac.setAdapter(adapter2); ac.setThreshold(3);
+        autocm.setAdapter(adapter2); autocm.setThreshold(3);
 
         spinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -65,7 +65,7 @@ public class startPage extends AppCompatActivity {
             }
         });
 
-        ac.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        autocm.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(startPage.this,"Let's Calculate BMI", Toast.LENGTH_SHORT).show();
