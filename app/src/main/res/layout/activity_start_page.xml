@@ -52,7 +52,7 @@
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/autocm"
+        android:id="@+id/auto"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="10dp"
         android:hint="  Write Your Answer if asked..."

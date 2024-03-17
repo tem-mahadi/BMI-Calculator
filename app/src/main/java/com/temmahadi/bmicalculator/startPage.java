@@ -35,7 +35,7 @@ public class startPage extends AppCompatActivity {
 
         Intent next = new Intent(this, MainActivity.class);
         spinner= findViewById(R.id.spinner);
-        autocm=findViewById(R.id.autocm);
+        autocm=findViewById(R.id.auto);
         t=findViewById(R.id.text2);
 
         arr.add("?_?");
