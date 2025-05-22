@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.temmahadi.bmicalculator.MainActivity;
 import com.temmahadi.bmicalculator.R;
+import com.temmahadi.bmicalculator.startPage;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences= getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
         if (sharedPreferences.getBoolean("directLogin", false)) {
             // If the user is already logged in, start MainActivity and finish LoginActivity
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, startPage.class);
             startActivity(intent);
             finish();
         }
@@ -54,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putString("username",username);
                         editor.putBoolean("directLogin",true);
                         editor.apply();
-                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        startActivity(new Intent(LoginActivity.this, startPage.class));
                         finish();
                     }
                     else { Toast.makeText(getApplicationContext(), "Invalid Password", Toast.LENGTH_SHORT).show(); }
