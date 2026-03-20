@@ -1,4 +1,5 @@
-package com.temmahadi.bmicalculator.BackEnd;
+package com.temmahadi.bmicalculator.BdApps_Backend;
+
 public class MobileNumberRequest {
     private String mobileNumber;
     private String referenceNo;
@@ -33,5 +34,3 @@ public class MobileNumberRequest {
         this.mobileNumber = mobileNumber;
     }
 }
-
-

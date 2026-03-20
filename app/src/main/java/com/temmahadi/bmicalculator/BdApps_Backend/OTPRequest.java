@@ -1,4 +1,4 @@
-package com.temmahadi.bmicalculator.BackEnd;
+package com.temmahadi.bmicalculator.BdApps_Backend;
 
 public class OTPRequest {
     private String referenceNo;
@@ -37,4 +37,3 @@ public class OTPRequest {
         this.subscriptionStatus = subscriptionStatus;
     }
 }
-

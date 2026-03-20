@@ -1,60 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".startPage"
-    android:background="#FF9100"
-    android:orientation="vertical"
+    android:background="@color/surface_bg"
     android:gravity="center_horizontal"
-    >
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".startPage">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lo"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        app:lottie_rawRes="@raw/watermelon"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="20dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        android:layout_marginTop="40dp"
-        />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        android:text="How Are You"
-        />
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:id="@+id/spinner"
-        />
-</LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/text2"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginLeft="5dp"
-        android:text="Hello Dear! Mahadi Here..."
-        android:layout_marginBottom="5dp" />
+        app:lottie_rawRes="@raw/watermelon" />
 
-    <AutoCompleteTextView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/auto"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="10dp"
-        android:hint="  Write Your Answer if asked..."
-        />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/card_surface"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+        app:strokeColor="@color/card_stroke"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome Back"
+                android:textColor="@color/text_primary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Pick your goal and get a personalized BMI experience"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/input_bg"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Choose your goal to personalize your BMI journey."
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/btn_bg"
+                android:text="Continue" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
 </LinearLayout>

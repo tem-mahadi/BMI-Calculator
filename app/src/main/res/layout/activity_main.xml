@@ -1,62 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:id="@+id/lnMain"
-    tools:context=".MainActivity"
-    >
+    android:background="@color/surface_bg"
+    tools:context=".MainActivity">
 
-   <ImageView
-       android:id="@+id/imageView"
-       android:layout_width="85dp"
-       android:layout_height="100dp"
-       android:layout_marginBottom="10dp"
-       android:background="#3D5AFE"
-       android:scaleType="centerCrop"
-       app:srcCompat="@android:drawable/ic_input_add" />
-
-   <EditText
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:ems="10"
-     android:hint="@string/hint_wt"
-     android:id="@+id/editWeight"
-     android:inputType="number"/>
-
-    <EditText
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:ems="10"
-     android:hint="@string/hint_ht"
-     android:id="@+id/editHeight"
-     android:inputType="number"/>
-
-    <EditText
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:ems="10"
-     android:hint="@string/hint_htInch"
-     android:id="@+id/editHeightInch"
-     android:inputType="number"/>
-
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/lnMain"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calculate BMI"
-        android:id="@+id/btnCalc"
-        android:layout_marginTop="11dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtResult"
-        android:text="Result"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        android:layout_marginTop="11dp"/>
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Snapshot"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Calculate BMI with smarter feedback"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="@color/card_surface"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/card_stroke"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/input_bg"
+                    android:padding="14dp"
+                    app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Unit"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/unitGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioMetric"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Metric" />
+
+                    <RadioButton
+                        android:id="@+id/radioImperial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Imperial" />
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/editWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/input_bg"
+                    android:hint="@string/hint_wt"
+                    android:inputType="numberDecimal"
+                    android:padding="12dp" />
+
+                <EditText
+                    android:id="@+id/editHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input_bg"
+                    android:hint="@string/hint_ht"
+                    android:inputType="numberDecimal"
+                    android:padding="12dp" />
+
+                <EditText
+                    android:id="@+id/editHeightInch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input_bg"
+                    android:hint="@string/hint_htInch"
+                    android:inputType="numberDecimal"
+                    android:padding="12dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnCalc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btn_bg"
+                    android:text="Calculate BMI" />
+
+                <Button
+                    android:id="@+id/btnViewProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="View Progress" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/resultCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="@color/result_default"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/txtResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Result"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtBmiValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="BMI: --"
+                    android:textColor="@color/text_primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Category: --"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtAdvice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Fill your data to get personalized guidance."
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtHealthyRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Healthy BMI range: 18.5 - 24.9"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

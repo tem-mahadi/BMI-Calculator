@@ -3,4 +3,9 @@
     <string name="hint_wt">Enter your Weight(in Kg)</string>
     <string name="hint_ht">Enter your Height(in Ft)</string>
     <string name="hint_htInch">Enter your Height(in Inch)</string>
+    <string name="hint_weight_kg">Enter weight (kg)</string>
+    <string name="hint_weight_lb">Enter weight (lb)</string>
+    <string name="hint_height_cm">Enter height (cm)</string>
+    <string name="hint_height_ft">Enter height (ft)</string>
+    <string name="hint_height_in">Enter height (in)</string>
 </resources>

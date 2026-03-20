@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF9100"
+    android:background="@color/auth_background"
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".BackEnd.OTPActivity">
@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BMI Calculator"
-        android:textColor="@color/black"
+        android:textColor="@color/text_primary"
         android:textSize="34sp"
         android:textStyle="bold" />
     <ImageView
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter OTP"
-        android:textColor="@color/black"
+        android:textColor="@color/text_primary"
         android:textSize="34sp"
         android:textStyle="bold"
         />
@@ -57,8 +57,8 @@
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
         android:paddingBottom="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
+        android:textColor="@color/input_text"
+        android:textColorHint="@color/input_hint"
         />
 
     <Button
@@ -67,6 +67,7 @@
         android:layout_height="41dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/btn_bg"
+        android:textColor="@color/button_text"
         android:text="Submit OTP"
         />
 

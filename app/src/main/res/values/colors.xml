@@ -2,6 +2,20 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="surface_bg">#FFF4F1EA</color>
+    <color name="auth_background">#FFF4B15A</color>
+    <color name="text_primary">#1F2A37</color>
+    <color name="text_secondary">#5B6470</color>
+    <color name="input_text">#1F2A37</color>
+    <color name="input_hint">#5B6470</color>
+    <color name="input_surface">#FFFFFFFF</color>
+    <color name="card_surface">#FFFFFFFF</color>
+    <color name="input_stroke">#D8DDE6</color>
+    <color name="button_surface">#1F2A37</color>
+    <color name="button_text">#FFFFFFFF</color>
+    <color name="icon_tint">#5B6470</color>
+    <color name="card_stroke">#D8DDE6</color>
+    <color name="result_default">#FFE7EEF7</color>
     <color name="uw">#FFEB3B</color>
     <color name="h">#8BC34A</color>
     <color name="ow">#FF5722</color>

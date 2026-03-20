@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 <uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
@@ -15,19 +16,7 @@
         android:theme="@style/Theme.BMICalculator"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BackEnd.RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BackEnd.OTPActivity"
-            android:exported="false" />
-        <activity
-            android:name=".startPage"
-            android:exported="false" />
-        <activity
-            android:name=".BackEnd.LoginActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,6 +24,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BdApps_Backend.OTPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".startPage"
+            android:exported="false" />
+        <activity
+            android:name=".BdApps_Backend.MobileNumberActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
